@@ -1,13 +1,86 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --background-color-application: #000000;
+
+  --background-color-nav: #000000;
+
+  --container-lg: 1024px;
+  --container-sm: 680px;
+  --container-xs: 420px;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Marvel";
+  src: local("Marvel"), url("./assets/fonts/MarvelRegular-Dj83.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Axiform";
+  src: local("Axiform"), url("./assets/fonts/Kastelov\ -\ Axiforma\ Bold.otf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Axiform Light";
+  src: local("Axiform Light"), url("./assets/fonts/Kastelov\ -\ Axiforma\ Light.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Axiform Thin";
+  src: local("Axiform Thin"), url("./assets/fonts/Kastelov\ -\ Axiforma\ Thin.otf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Axiform Medium";
+  src: local("Axiform Medium"), url("./assets/fonts/Kastelov\ -\ Axiforma\ Medium.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Axiform Regular";
+  src: local("Axiform Regular"), url("./assets/fonts/Kastelov\ -\ Axiforma\ Regular.otf") format("truetype");
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  background: var(--background-color-application);
+  background-image: url("../public/images/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+}
+
+ul {
+ list-style: none;
+ margin: 0;
+ padding: 0; 
+}
+nav {
+  background-color: var(--background-color-nav);
+  height: 114px;
+}
+
+h2, h1, p {
+  margin: 0;
+}
+
+
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../public/images/details-card--background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 20;
 }
